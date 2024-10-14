@@ -1,0 +1,8 @@
+<html lang="en">
+    {% for snippet in snippets %}
+        . {{ snippet.title }}: {{ snippet.code }}
+        <br/>
+        {% empty %}
+        . No snippet found
+    {% endfor %}
+</html>
