@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet Form</title>
+</head>
+<body>
+    <h1>Submit Snippet</h1>
+
+    <form method="POST">
+        <!-- Include CSRF token for security -->
+        {% csrf_token %}
+
+        <!-- Display the form fields -->
+        {{ form.as_p }}
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

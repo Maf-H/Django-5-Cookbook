@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from snippets.views import snippet_list
+from snippets.views import snippet_list, submit_snippet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('snippets/', snippet_list, name='snippet_list'),
+    path('submit/', submit_snippet, name='submit_snippet'),
 ]
